@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Jharkhand Yatra</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            
+            <!-- NEW: Login Role Selection Tabs -->
+            <div class="login-tabs">
+                <button class="tab-btn active" data-role="user">User</button>
+                <button class="tab-btn" data-role="artisan">Artisan</button>
+                <button class="tab-btn" data-role="official">Official</button>
+            </div>
+
+            <h2 id="login-title">User Login</h2>
+            <p id="login-subtitle">Login to your Jharkhand Yatra account.</p>
+            
+            <form>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="you@example.com" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="btn-primary login-btn">Login</button>
+            </form>
+
+            <div class="login-footer">
+                <a href="index.html">← Back to Home</a>
+                <a href="#">Forgot Password?</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NEW: JavaScript for Tab Switching -->
+    <script>
+    const tabs = document.querySelectorAll('.tab-btn');
+    const loginTitle = document.getElementById('login-title');
+    const loginSubtitle = document.getElementById('login-subtitle');
+    const loginForm = document.querySelector('form');
+    let activeRole = 'user'; // Keep track of the current role
+
+    const content = {
+        user: { title: 'User Login', subtitle: 'Login to your Jharkhand Yatra account.' },
+        artisan: { title: 'Artisan & Vendor Login', subtitle: 'Access your seller dashboard.' },
+        official: { title: 'Government Official Login', subtitle: 'Access the tourism analytics dashboard.' }
+    };
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            activeRole = tab.getAttribute('data-role');
+            loginTitle.textContent = content[activeRole].title;
+            loginSubtitle.textContent = content[activeRole].subtitle;
+        });
+    });
+
+    // NEW LOGIC: Handle form submission
+    loginForm.addEventListener('submit', (e) => {
+        e.preventDefault(); // Stop the form from actually submitting
+
+        if (activeRole === 'official') {
+            // If the official tab is active, go to the dashboard
+            window.location.href = 'dashboard.html';
+        } else {
+            // For user or artisan, just go to the profile page for the demo
+            window.location.href = 'profile.html';
+        }
+    });
+</script>
+</body>
+</html>

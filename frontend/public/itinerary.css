@@ -1,0 +1,152 @@
+/* Styles for the new, attractive itinerary page */
+
+/* NEW: Professional background image for the page */
+/* --- TRANSPARENT NAVBAR STYLES --- */
+/* This targets the header ONLY on the itinerary page */
+
+.itinerary-page-body header {
+    background-color: transparent; /* Remove the white background */
+    box-shadow: none; /* Remove the shadow */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Add a subtle separator line */
+}
+
+/* Make the logo and nav links white so they are visible */
+.itinerary-page-body header .logo,
+.itinerary-page-body header .nav-links a {
+    color: var(--white-color);
+}
+
+/* Keep the orange hover effect for the links */
+.itinerary-page-body header .nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Make the button's border white */
+.itinerary-page-body header .btn-secondary {
+    color: var(--white-color);
+    border-color: var(--white-color);
+}
+
+.itinerary-page-body header .btn-secondary:hover {
+    background-color: var(--white-color);
+    color: var(--dark-color);
+}
+.itinerary-page-body {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=2070');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.itinerary-header {
+    padding: 40px 20px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    color: var(--white-color);
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* UPDATED: Heading is now orange with a better shadow */
+.itinerary-header h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: var(--primary-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    opacity: 0.3;
+}
+
+.day-card {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.day-card.left {
+    left: 0;
+}
+
+.day-card.right {
+    left: 50%;
+}
+
+.day-card::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -13px;
+    background-color: var(--white-color);
+    border: 4px solid var(--primary-color);
+    top: 25px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.right::after {
+    left: -13px;
+}
+
+.day-content {
+    padding: 20px 30px;
+    background-color: var(--white-color);
+    position: relative;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+}
+
+.day-content h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.day-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.day-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--gray-color);
+}
+
+.recommendations {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--light-color);
+}
+
+.recommendations li {
+    list-style: none;
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+
+.recommendations i {
+    color: var(--primary-color);
+    margin-right: 10px;
+}

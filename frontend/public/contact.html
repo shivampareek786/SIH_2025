@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Jharkhand Smart Tourism</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="contact.css">
+    
+    <style>
+        /* Custom CSS Variables for easier Tailwind config and custom component styles */
+        :root {
+            --nature-green: #2C5A48;
+            --accent-orange: #E68337;
+            --off-white: #FBFBFB;
+            --soft-peach: #F9D3B4;
+            --earthy-brown: #8B5E3C;
+        }
+        
+        body {
+            /* These styles are kept here for immediate application and clarity */
+            background-color: var(--off-white);
+            color: var(--earthy-brown);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+        }
+        
+        /* Glassmorphism Effect */
+        .glass-panel {
+            background-color: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(35px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+        
+        /* Hero Section Background */
+        .hero-section {
+            background: linear-gradient(rgba(44, 90, 72, 0.8), rgba(44, 90, 72, 0.6)), url('https://images.unsplash.com/photo-1586016413664-864c0dd76f53?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <nav class="sticky top-0 left-0 w-full z-50 p-4">
+        <div class="container mx-auto flex justify-between items-center glass-panel p-4 rounded-full shadow-lg">
+            <a class="text-2xl font-bold text-nature-green">Jharkhand Smart Tourism</a>
+            
+            <div class="hidden md:flex space-x-6">
+                 <li><a href="index.html">Home</a></li>
+                 <li><a href="destinations.html">Destinations</a></li>
+    <li><a href="market.html">Marketplace</a></li>
+    <li><a href="transportation.html">Transportation</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="profile.html" class="btn-secondary">My Profile</a></li>
+      <li><a href="login.html" class="btn-secondary">login</a></li>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <button class="text-2xl text-earthy-brown hover:text-accent-orange transition-colors"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="text-2xl text-earthy-brown hover:text-accent-orange transition-colors"><i class="fa-solid fa-globe"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section relative py-20 md:py-32 w-full flex flex-col items-center justify-center px-4">
+        <div class="glass-panel text-center text-off-white p-8 md:p-16 relative z-10 w-full max-w-4xl rounded-2xl whiteText">
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 drop-shadow-lg">
+                Contact Us - Jharkhand Smart Tourism
+            </h1>
+            <p class="text-lg md:text-xl font-light mb-8 max-w-2xl mx-auto">
+                Whether you're planning your trip or facing an unexpected situation, we're here to help. Reach out to the right support instantly.
+            </p>
+            <a href="#contact-info">
+                <button class="cta-button bg-accent-orange text-off-white px-8 py-4 rounded-full text-lg font-semibold shadow-xl transition transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-accent-orange/50">
+                    Get Help Now
+                </button>
+            </a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12 flex flex-col gap-12">
+        <section id="contact-info" class="mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-nature-green mb-8 text-center">Tourism Support & Information</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="contact-card glass-panel p-6 rounded-xl transition-all">
+                    <div class="flex items-start mb-4">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-nature-green">24x7 Tourism Helpline</h3>
+                            <p class="text-sm text-gray-600">Available in multiple languages</p>
+                        </div>
+                    </div>
+                    <p class="text-2xl font-bold text-accent-orange mb-2">1800-123-1552</p>
+                    <p class="text-sm">Toll-free number for tourism assistance</p>
+                </div>
+                
+                <div class="contact-card glass-panel p-6 rounded-xl transition-all">
+                    <div class="flex items-start mb-4">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-nature-green">Email Support</h3>
+                            <p class="text-sm text-gray-600">Response within 24 hours</p>
+                        </div>
+                    </div>
+                    <p class="text-lg font-medium text-nature-green mb-2">support@jharkhandsmarttourism.in</p>
+                    <p class="text-sm">For general inquiries and assistance</p>
+                </div>
+                
+                <div class="contact-card glass-panel p-6 rounded-xl transition-all">
+                    <div class="flex items-start mb-4">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-nature-green">Tourist Information Centres</h3>
+                            <p class="text-sm text-gray-600">Located across Jharkhand</p>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <p class="font-medium">Ranchi TIC: <span class="text-nature-green">+91-651-1234567</span></p>
+                        <p class="font-medium">Deoghar TIC: <span class="text-nature-green">+91-6432-123456</span></p>
+                        <p class="font-medium">Netarhat TIC: <span class="text-nature-green">+91-6582-123789</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-nature-green mb-8 text-center">Emergency Contacts</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="emergency-card glass-panel p-6 rounded-xl text-center pulse">
+                    <div class="text-3xl mb-3"><i class="fa-solid fa-handcuffs"></i></div>
+                    <h3 class="font-bold text-lg mb-2">Police</h3>
+                    <p class="text-2xl font-bold">Dial 100</p>
+                </div>
+                
+                <div class="emergency-card glass-panel p-6 rounded-xl text-center pulse">
+                    <div class="text-3xl mb-3"><i class="fa-solid fa-truck-medical"></i></div>
+                    <h3 class="font-bold text-lg mb-2">Ambulance</h3>
+                    <p class="text-2xl font-bold">Dial 108</p>
+                </div>
+                
+                <div class="emergency-card glass-panel p-6 rounded-xl text-center pulse">
+                    <div class="text-3xl mb-3"><i class="fa-solid fa-fire"></i></div>
+                    <h3 class="font-bold text-lg mb-2">Fire Emergency</h3>
+                    <p class="text-2xl font-bold">Dial 101</p>
+                </div>
+                
+                <div class="emergency-card glass-panel p-6 rounded-xl text-center pulse">
+                    <div class="text-3xl mb-3"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3 class="font-bold text-lg mb-2">Tourist Police</h3>
+                    <p class="text-2xl font-bold">+91-94701-23456</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-nature-green mb-8 text-center">District-Level Tourism Authorities</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="contact-card glass-panel p-6 rounded-xl transition-all">
+                    <h3 class="font-bold text-lg text-nature-green mb-2">Ranchi Tourism Officer</h3>
+                    <p class="text-lg font-medium text-accent-orange mb-1">+91-94311-11111</p>
+                    <p class="text-sm text-gray-600">For local support, permissions, or area-specific queries</p>
+                </div>
+                
+                <div class="contact-card glass-panel p-6 rounded-xl transition-all">
+                    <h3 class="font-bold text-lg text-nature-green mb-2">Jamshedpur Tourism Officer</h3>
+                    <p class="text-lg font-medium text-accent-orange mb-1">+91-94313-22222</p>
+                    <p class="text-sm text-gray-600">For local support, permissions, or area-specific queries</p>
+                </div>
+                
+                <div class="contact-card glass-panel p-6 rounded-xl transition-all">
+                    <h3 class="font-bold text-lg text-nature-green mb-2">Hazaribagh Tourism Officer</h3>
+                    <p class="text-lg font-medium text-accent-orange mb-1">+91-94315-33333</p>
+                    <p class="text-sm text-gray-600">For local support, permissions, or area-specific queries</p>
+                </div>
+                
+                <div class="contact-card glass-panel p-6 rounded-xl transition-all">
+                    <h3 class="font-bold text-lg text-nature-green mb-2">Deoghar Tourism Officer</h3>
+                    <p class="text-lg font-medium text-accent-orange mb-1">+91-94316-44444</p>
+                    <p class="text-sm text-gray-600">For local support, permissions, or area-specific queries</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <section>
+                <h2 class="text-2xl md:text-3xl font-bold text-nature-green mb-6">Emergency Support & Safety</h2>
+                <div class="glass-panel p-6 rounded-xl">
+                    <div class="mb-6">
+                        <h3 class="font-bold text-lg text-nature-green mb-2">24x7 Tourist Emergency Support Cell</h3>
+                        <p class="text-lg font-medium text-accent-orange">+91-95070-00000</p>
+                        <p class="text-sm mt-2">For accidents, safety issues, or urgent assistance</p>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h3 class="font-bold text-lg text-nature-green mb-2">Lost & Found Assistance</h3>
+                        <p class="text-lg font-medium text-nature-green">lostfound@jharkhandsmarttourism.in</p>
+                        <p class="text-sm mt-2">Report lost items or help return found belongings</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-bold text-lg text-nature-green mb-2">Nearest Hospital Locator</h3>
+                        <button class="bg-accent-orange text-white px-4 py-2 rounded-full text-sm font-semibold transition hover:bg-accent-orange/90">
+                            Click to Locate Nearest Hospital
+                        </button>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2 class="text-2xl md:text-3xl font-bold text-nature-green mb-6">Feedback & Complaints</h2>
+                <div class="glass-panel p-6 rounded-xl">
+                    <p class="mb-4">Help us improve your experience. Share your feedback or report issues.</p>
+                    
+                    <div class="mb-4">
+                        <h3 class="font-bold text-lg text-nature-green mb-2">Email</h3>
+                        <p class="text-lg font-medium text-nature-green">feedback@jharkhandsmarttourism.in</p>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h3 class="font-bold text-lg text-nature-green mb-2">WhatsApp Support</h3>
+                        <p class="text-lg font-medium text-accent-orange">+91-98765-43210</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-bold text-lg text-nature-green mb-2">Quick Feedback Form</h3>
+                        <form class="space-y-3">
+                            <input type="text" placeholder="Your Name" class="form-input w-full">
+                            <input type="email" placeholder="Your Email" class="form-input w-full">
+                            <textarea placeholder="Your Feedback" rows="3" class="form-input w-full"></textarea>
+                            <button type="submit" class="bg-nature-green text-white px-4 py-2 rounded-full text-sm font-semibold transition hover:bg-nature-green/90 w-full">
+                                Submit Feedback
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="mt-8">
+            <h2 class="text-2xl md:text-3xl font-bold text-nature-green mb-6 text-center">Smart Help On-the-Go</h2>
+            <div class="glass-panel p-6 md:p-8 rounded-xl text-center">
+                <p class="text-lg mb-4">Use the Smart Help feature in our mobile app for instant assistance:</p>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+                    <div class="flex flex-col items-center">
+                        <div class="contact-icon mb-2">
+                            <i class="fas fa-comments text-xl"></i>
+                        </div>
+                        <p class="font-medium">Live Chat with Assistant</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="contact-icon mb-2">
+                            <i class="fas fa-map-marked-alt text-xl"></i>
+                        </div>
+                        <p class="font-medium">Nearest Services Locator</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="contact-icon mb-2">
+                            <i class="fas fa-bell text-xl"></i>
+                        </div>
+                        <p class="font-medium">Safety Alerts</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="contact-icon mb-2">
+                            <i class="fas fa-road text-xl"></i>
+                        </div>
+                        <p class="font-medium">Real-time Guidance</p>
+                    </div>
+                </div>
+                <button class="bg-accent-orange text-white px-6 py-3 rounded-full font-semibold transition hover:bg-accent-orange/90">
+                    Download Our App
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-nature-green text-off-white mt-12 py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Jharkhand Tourism</h3>
+                    <p>Discover the soul of Jharkhand through its rich culture, heritage, and natural beauty.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="artisans.html" class="hover:text-soft-peach transition">Artisans & Crafts</a></li>
+                        <li><a href="#homestays" class="hover:text-soft-peach transition">Homestays</a></li>
+                        <li><a href="#destinations" class="hover:text-soft-peach transition">Tourist Destinations</a></li>
+                        <li><a href="contact.html" class="hover:text-soft-peach transition">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Connect With Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-2xl hover:text-soft-peach transition"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-2xl hover:text-soft-peach transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-2xl hover:text-soft-peach transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-2xl hover:text-soft-peach transition"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-600 mt-8 pt-6 text-center text-sm">
+                <p>&copy; 2025 Jharkhand Smart Tourism. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+/* Note: Tailwind CSS utility classes are applied directly in the HTML. */
+/* This file contains the custom CSS not handled by Tailwind classes or already in the HTML's <style> block. */
+/* The variables and basic body styles were kept in the HTML's <style> for immediate application, 
+   but other specific component styles are moved here. */
+
+/* Custom Contact Icon Styling */
+
+.whiteText{
+    color: white;
+}
+.contact-icon {
+    background-color: rgba(44, 90, 72, 0.1); /* Uses var(--nature-green) implicitly */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    color: var(--nature-green);
+}
+
+/* Contact Card Hover Effect */
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Emergency Card Specific Styling */
+.emergency-card {
+    background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+    color: white;
+}
+
+/* Form Input Styling */
+.form-input {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(44, 90, 72, 0.2);
+    border-radius: 0.75rem;
+    padding: 0.75rem 1rem;
+    transition: all 0.3s;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--nature-green);
+    box-shadow: 0 0 0 3px rgba(44, 90, 72, 0.1);
+}
+
+/* Pulse Animation for Emergency Cards */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Responsive Grid Adjustment (Media Query) */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}

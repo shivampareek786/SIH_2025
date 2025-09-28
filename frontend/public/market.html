@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Living Canvas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="market.css">
+</head>
+<body class="bg-off-white text-earthy-brown font-sans leading-relaxed min-h-screen flex flex-col">
+
+    <nav class="sticky top-0 left-0 w-full z-50 p-4">
+        <div class="container mx-auto flex justify-between items-center glass-panel p-4 rounded-full shadow-lg">
+            <a href="#" class="text-2xl font-bold text-nature-green">Jharkhand Smart Tourism</a>
+            
+            <div class="hidden md:flex space-x-6">
+                 <li><a href="index.html">Home</a></li>
+                     <li><a href="destinations.html">Destinations</a></li>
+    <li><a href="transportation.html">Transportation</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="profile.html" class="btn-secondary">My Profile</a></li>
+      <li><a href="login.html" class="btn-secondary">login</a></li>
+        
+            
+            <div class="flex items-center space-x-4">
+                <span class="text-earthy-brown font-semibold">Saved: <span id="saved-count" class="text-accent-orange">0</span></span>
+                <button class="text-2xl text-earthy-brown hover:text-accent-orange transition-colors">❤️</button>
+                <button class="text-2xl text-earthy-brown hover:text-accent-orange transition-colors">🛒</button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section hero-liquid relative h-screen w-full flex flex-col items-center justify-center p-4 " >
+        
+        <div class="glass-panel text-center text-off-white p-8 md:p-16 relative z-10 w-full max-w-4xl rounded-2xl">
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 drop-shadow-lg">
+Discover the Soul of Jharkhand’s Craft.
+            </h1>
+            <p class="text-lg md:text-xl font-light mb-8 max-w-2xl mx-auto">
+Authentic crafts and homestays from Jharkhand’s artisans — no middlemen, just culture.            </p>
+            <a href="#products">
+                <button class="cta-button bg-accent-orange text-off-white px-8 py-4 rounded-full text-lg font-semibold shadow-xl transition transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-accent-orange/50">
+                    Explore Products
+                </button>
+            </a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-16 flex flex-col gap-12">
+
+       <section id="products">
+    <h2 class="text-3xl md:text-4xl font-bold text-nature-green mb-8 text-center">Handcrafted by Local Artisans</h2>
+    <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        </div>
+    <div class="text-center mt-12">
+        <button id="load-more-btn" class="bg-gray-200 text-gray-700 px-6 py-3 rounded-full font-semibold transition hover:bg-gray-300">Load More</button>
+    </div>
+</section>
+        <section id="homestays">
+            <h2 class="text-3xl md:text-4xl font-bold text-nature-green mb-8 text-center">Homestays in Tribal community</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="#" class="homestay-card glass-panel p-4 rounded-xl transition-all hover:scale-[1.02] hover:shadow-md flex items-center">
+                    <img src="All img resource/homeStay02.jpg" alt="Sarpanch house Homestay" class="w-24 h-24 rounded-lg object-cover mr-4">
+                    <div>
+                        <p class="font-semibold text-earthy-brown">Sarpanch's house Homestay</p>
+                        <span class="text-sm text-gray-500">Tilsiri village</span>
+                    </div>
+                </a>
+                <a href="#" class="homestay-card glass-panel p-4 rounded-xl transition-all hover:scale-[1.02] hover:shadow-md flex items-center">
+                    <img src="All img resource/homeStay01.jpg" alt="Village House Homestay" class="w-24 h-24 rounded-lg object-cover mr-4">
+                    <div>
+                        <p class="font-semibold text-earthy-brown">Village house homestay</p>
+                        <span class="text-sm text-gray-500">Tilsiri</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section id="events">
+            <h2 class="text-3xl md:text-4xl font-bold text-nature-green mb-8 text-center">Artisan Events</h2>
+            <ul class="space-y-3">
+                <li class="glass-panel p-4 rounded-xl transition-all hover:scale-[1.02] hover:shadow-md">
+                    <a href="#" class="block">
+                        <span class="text-sm font-light text-gray-600">Jan 20</span>
+                        <p class="font-medium text-earthy-brown">Sarhul:
+This is a major spring festival where tribes worship the Sal tree, symbolizing the new year, spring, and fertility. </p>
+                    </a>
+                </li>
+                <li class="glass-panel p-4 rounded-xl transition-all hover:scale-[1.02] hover:shadow-md">
+                    <a href="#" class="block">
+                        <span class="text-sm font-light text-gray-600">Feb 15</span>
+                        <p class="font-medium text-earthy-brown">Karam:
+A harvest festival dedicated to Karam Devta, the god of power, youth, and youthfulness, celebrated by various tribes. </p>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+    <script type="module" src="market.js"></script>
+</body>
+</html>

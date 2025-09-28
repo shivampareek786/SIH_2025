@@ -1,0 +1,627 @@
+/* ======== GOOGLE FONTS & GLOBAL STYLES ======== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #E67E22; /* Vibrant Saffron */
+    --dark-color: #2C3E50;    /* Deep Forest Green */
+    --light-color: #F4F4F9;   /* Light Cream */
+    --white-color: #FFFFFF;
+    --gray-color: #555;
+    --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--gray-color);
+    margin-bottom: 50px;
+}
+
+/* ======== HEADER & NAVIGATION ======== */
+header {
+    background-color: var(--white-color);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* ======== BUTTONS ======== */
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #d35400;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+
+/* ======== HERO SECTION ======== */
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white-color);
+    position: relative;
+    /* --- ADD YOUR HERO IMAGE URL HERE --- */
+    background-image: url('hero2.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.itinerary-form {
+    display: flex;
+    gap: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    background: var(--white-color);
+    padding: 0 15px;
+    border-radius: 50px;
+    flex-grow: 1;
+}
+
+.form-group i {
+    color: var(--gray-color);
+    margin-right: 10px;
+}
+
+.form-group select, .form-group input {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 15px 0;
+    font-size: 1rem;
+    width: 100%;
+    color: var(--dark-color);
+}
+
+
+/* ======== FEATURES SECTION ======== */
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.feature-card {
+    background-color: var(--white-color);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+}
+
+.feature-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+
+/* ======== EXPLORE BY INTEREST SECTION ======== */
+.interest-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.interest-card {
+    height: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    color: var(--white-color);
+    display: flex;
+    align-items: flex-end;
+    padding: 30px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.interest-card:hover {
+    transform: scale(1.03);
+}
+
+.interest-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+.interest-card h3 {
+    position: relative;
+    z-index: 1;
+    font-size: 1.8rem;
+}
+
+.interest-card:nth-child(1) { grid-column: 1 / 2; grid-row: 1 / 3; height: 630px;}
+.interest-card:nth-child(2) { grid-column: 2 / 3; }
+.interest-card:nth-child(3) { grid-column: 2 / 3; }
+
+/* ======== MARKETPLACE SECTION ======== */
+.product-carousel {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    padding-bottom: 20px; /* Space for scrollbar */
+}
+
+.product-carousel::-webkit-scrollbar {
+    height: 8px;
+}
+
+.product-carousel::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+.product-card {
+    flex: 0 0 280px;
+    background: var(--white-color);
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    text-align: center;
+}
+
+.product-image {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+.product-card h4 {
+    margin: 15px 0 5px;
+    font-size: 1.2rem;
+}
+
+.product-card p {
+    color: var(--gray-color);
+    padding-bottom: 20px;
+}
+
+
+/* ======== GUIDES SECTION ======== */
+.guides {
+    background-color: var(--white-color);
+}
+
+.guides-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.guide-card {
+    text-align: center;
+    position: relative;
+}
+
+.guide-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--white-color);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 20px;
+}
+
+.verified-badge {
+    background-color: #27ae60;
+    color: var(--white-color);
+    padding: 5px 10px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    position: absolute;
+    top: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.guide-card h3 {
+    font-size: 1.4rem;
+}
+
+.guide-card p {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+
+/* ======== FLOATING CHATBOT ======== */
+.chatbot-icon {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    z-index: 100;
+}
+
+
+/* ======== FOOTER ======== */
+footer {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 30px 0;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links a {
+    color: var(--light-color);
+    text-decoration: none;
+    font-size: 1.3rem;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* ======== RESPONSIVE DESIGN ======== */
+@media (max-width: 992px) {
+    .features, .guides-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .interest-grid {
+        grid-template-columns: 1fr;
+    }
+    .interest-card:nth-child(1) { height: 300px;}
+    .nav-links { display: none; } /* Simple hiding for prototype */
+}
+
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .itinerary-form { flex-direction: column; }
+    .section-title { font-size: 2rem; }
+    .features, .guides-grid { grid-template-columns: 1fr; }
+}
+
+/* ======== MODAL (POPUP) STYLES ======== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: var(--white-color);
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-content {
+    transform: scale(1);
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: var(--gray-color);
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+/* ======== MODAL (POPUP) STYLES ======== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: var(--white-color);
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.8rem;
+    color: var(--gray-color);
+    cursor: pointer;
+    border: none;
+    background: none;
+    line-height: 1;
+}
+/* ======== BOOKING PAGE STYLES ======== */
+.booking-container {
+    display: flex;
+    gap: 40px;
+    background: var(--white-color);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+}
+.booking-form { flex: 2; }
+.trip-summary { flex: 1; background: var(--light-color); padding: 20px; border-radius: 8px; }
+
+.input-group {
+    margin-bottom: 20px;
+}
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+.price-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+/* ======== CONFIRMATION PAGE STYLES ======== */
+.confirmation-box {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--white-color);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+}
+.conf-icon {
+    font-size: 4rem;
+    color: #27ae60;
+    margin-bottom: 20px;
+}
+/* ======== CLEANER CONFIRMATION PAGE STYLES ======== */
+
+/* This targets the <body> tag ONLY on the confirmation page */
+.confirmation-body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.imgur.com/Gk1nchB.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Overwrite the old .confirmation-box style */
+.confirmation-box {
+    background: rgba(30, 40, 50, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--white-color);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    max-width: 550px;
+    width: 100%;
+    text-align: center;
+}
+
+.confirmation-box h1 {
+    color: var(--white-color);
+    margin-top: -5px;
+}
+
+.confirmation-box p {
+    color: var(--light-color);
+    opacity: 0.9;
+}
+
+.confirmation-box #booking-id {
+    color: var(--primary-color);
+    background: rgba(0, 0, 0, 0.3);
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.confirmation-button-group {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}

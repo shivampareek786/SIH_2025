@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExploreJharkhand - Discover Nature & Culture</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="glass" >
+        <div class="loco">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                  <span>Jharkhand Smart Tourism</span>
+                </div>
+                
+                <div class="nav-links blurEffect">
+                    <a href="#">Home</a>
+                    <a href="#">Destinations</a>
+                    <a href="#">Marketplace</a>
+                    <a href="#">Transportation</a>
+                    <a href="#">Contact us</a>
+                    <a href="#">Feedback</a>
+                </div>
+                
+                <div class="header-actions">
+                    
+                    
+                </div>
+            </nav>
+        </div>
+    
+
+    <section class="hero">
+        <div class="container">
+            <h1>Jharkhand: Land of Forests and Waterfalls</h1>
+            <p class="blurEffect">Explore the stunning natural beauty, rich tribal culture, and vibrant traditions of Eastern India.</p>
+            <a href="#" class="cta-button">Plan Your Trip</a>
+            <br><br>
+            <div class="search-container" >
+                        <input type="text" class="search-bar" placeholder="Search destinations...">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+        </div>
+    </section></div>
+</header>
+    <main class="container">
+        <section class="categories">
+            <div class="category-tabs">
+                <button class="category-tab active" data-category="all">All</button>
+                <button class="category-tab" data-category="nature">Nature</button>
+                <button class="category-tab" data-category="spiritual">Spiritual</button>
+                <button class="category-tab" data-category="adventure">Adventure</button>
+                <button class="category-tab" data-category="beach">Culture</button>
+                <button class="category-tab" data-category="historical">Historical</button>
+            </div>
+        </section>
+
+        <section class="filters">
+            <div class="filter-group">
+                <select class="filter-select glass" id="locationFilter">
+                    <option value="all">All Districts</option>
+                    <option value="ranchi">Ranchi</option>
+                    <option value="jamshedpur">Jamshedpur</option>
+                    <option value="dhanbad">Dhanbad</option>
+                    <option value="hazaribagh">Hazaribagh</option>
+                </select>
+                
+                <select class="filter-select glass" id="difficultyFilter">
+                    <option value="all">Any Travel Type</option>
+                    <option value="easy">Family</option>
+                    <option value="moderate">Trekking</option>
+                    <option value="challenging">Expedition</option>
+                </select>
+            </div>
+            
+            <div class="results-count">
+                Showing <span id="resultsCount">6</span> of 25 destinations
+            </div>
+        </section>
+
+        <section class="places-grid" id="placesGrid">
+            </section>
+
+        <div class="load-more">
+            <button class="load-more-btn glass" id="loadMore">Load More Destinations</button>
+        </div>
+    </main>
+
+    <div class="modal" id="vrModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>360° Virtual Tour</h2>
+                <button class="close-modal" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <iframe class="vr-iframe" id="vrIframe" src="" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">
+                    <span>Jharkhand Smart Tourism</span>
+                </div>
+                
+                <p>Discover the Land of Forests and its hidden gems.</p>
+                
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                
+                <p>&copy; 2025 ExploreJharkhand. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

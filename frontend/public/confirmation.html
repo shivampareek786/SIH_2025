@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmed! - Jharkhand Yatra</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body class="confirmation-body">
+
+    <div class="confirmation-box">
+        <div class="conf-icon"><i class="fa-solid fa-check-circle"></i></div>
+        <h1>Booking Confirmed!</h1>
+        <p>Your adventure awaits! Your Booking ID is <strong id="booking-id"></strong>.</p>
+        
+        <hr style="border-color: rgba(255,255,255,0.15); margin: 25px 0;">
+
+        <div class="trip-management">
+            <h3>Next Step: Arrange Your Travel</h3>
+            <p>Book verified transport for your day trips.</p>
+            <button class="btn-primary" id="manage-transport-btn" style="margin-top: 15px;">
+                <i class="fa-solid fa-car"></i> Book Transport & Add-ons
+            </button>
+        </div>
+        
+        <div class="confirmation-button-group">
+            <a href="index.html" class="btn-secondary">Go to Homepage</a>
+            <button class="btn-secondary" id="feedback-btn">Leave Feedback</button>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <div id="modal-content-body"></div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script>
+        // This script generates the random booking ID
+        document.getElementById('booking-id').textContent = 'JY-' + Math.random().toString(36).substr(2, 8).toUpperCase();
+    </script>
+
+</body>
+</html>

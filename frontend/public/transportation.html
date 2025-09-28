@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transportation – Jharkhand Smart Tourism</title>
+    <link rel="stylesheet" href="transportation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Jharkhand Smart Tourism</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                 <li><a href="destinations.html">Destinations</a></li>
+    <li><a href="market.html">Marketplace</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="profile.html" class="btn-secondary">My Profile</a></li>
+      <li><a href="login.html" class="btn-secondary">login</a></li>>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero hero-liquid">
+        <div class="container">
+            <h1>Transportation – Travel Smarter Across Jharkhand</h1>
+            <p>Find how to reach, move, and explore – by air, rail, road, or rental.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary cta-button" id="detectLocation">
+                    <i class="fas fa-map-marker-alt"></i> Detect My Location
+                </button>
+                <button class="btn btn-secondary glass-panel" id="getDirections">
+                    <i class="fas fa-route"></i> Get Directions
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <div class="container">
+            <div class="map-overlay glass-panel">
+                <h3>Jharkhand Transport Hubs</h3>
+                <p>Explore transportation options across the state</p>
+            </div>
+            <div class="map-container glass-panel">
+                <div id="map"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="destinations">
+        <div class="container">
+            <div class="section-title">
+                <h2>Popular Tourist Destinations</h2>
+                <p>Transport options for key locations in Jharkhand</p>
+            </div>
+            
+            <div class="destinations-grid">
+                <div class="destination-card glass-panel">
+                    <div class="card-image" style="background-image: url('transportation img resource/ranchi.jpg')"></div>
+                    <div class="card-content">
+                        <h3>Ranchi</h3>
+                        <div class="transport-icons">
+                            <div class="transport-icon"><i class="fas fa-plane"></i><span>Airport</span></div>
+                            <div class="transport-icon"><i class="fas fa-train"></i><span>Railway</span></div>
+                            <div class="transport-icon"><i class="fas fa-bus"></i><span>Bus</span></div>
+                            <div class="transport-icon"><i class="fas fa-taxi"></i><span>Local</span></div>
+                        </div>
+                        <div class="card-actions">
+                            <button class="card-btn cta-button"><i class="fas fa-car"></i> Book Cab</button>
+                            <button class="card-btn"><i class="fas fa-route"></i> Show Routes</button>
+                            <button class="card-btn"><i class="fas fa-directions"></i> Directions</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="destination-card glass-panel">
+                    <div class="card-image" style="background-image: url('transportation img resource/Deoghar.jpg')"></div>
+                    <div class="card-content">
+                        <h3>Deoghar</h3>
+                        <div class="transport-icons">
+                            <div class="transport-icon"><i class="fas fa-train"></i><span>Railway</span></div>
+                            <div class="transport-icon"><i class="fas fa-bus"></i><span>Bus</span></div>
+                            <div class="transport-icon"><i class="fas fa-taxi"></i><span>Local</span></div>
+                        </div>
+                        <div class="card-actions">
+                            <button class="card-btn cta-button"><i class="fas fa-car"></i> Book Cab</button>
+                            <button class="card-btn"><i class="fas fa-route"></i> Show Routes</button>
+                            <button class="card-btn"><i class="fas fa-directions"></i> Directions</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="destination-card glass-panel">
+                    <div class="card-image" style="background-image: url('transportation img resource/netarhat.jpg')"></div>
+                    <div class="card-content">
+                        <h3>Netarhat</h3>
+                        <div class="transport-icons">
+                            <div class="transport-icon"><i class="fas fa-bus"></i><span>Bus</span></div>
+                            <div class="transport-icon"><i class="fas fa-taxi"></i><span>Local</span></div>
+                        </div>
+                        <div class="card-actions">
+                            <button class="card-btn cta-button"><i class="fas fa-car"></i> Book Cab</button>
+                            <button class="card-btn"><i class="fas fa-route"></i> Show Routes</button>
+                            <button class="card-btn"><i class="fas fa-directions"></i> Directions</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="destination-card glass-panel">
+                    <div class="card-image" style="background-image: url('transportation img resource/jamshedpur.jpg')"></div>
+                    <div class="card-content">
+                        <h3>Jamshedpur</h3>
+                        <div class="transport-icons">
+                            <div class="transport-icon"><i class="fas fa-train"></i><span>Railway</span></div>
+                            <div class="transport-icon"><i class="fas fa-bus"></i><span>Bus</span></div>
+                            <div class="transport-icon"><i class="fas fa-taxi"></i><span>Local</span></div>
+                        </div>
+                        <div class="card-actions">
+                            <button class="card-btn cta-button"><i class="fas fa-car"></i> Book Cab</button>
+                            <button class="card-btn"><i class="fas fa-route"></i> Show Routes</button>
+                            <button class="card-btn"><i class="fas fa-directions"></i> Directions</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="smart-features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Smart Transportation Features</h2>
+                <p>Tools to make your travel in Jharkhand seamless</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card glass-panel">
+                    <div class="feature-icon"><i class="fas fa-map-marked-alt"></i></div>
+                    <h3>Nearest Transport Hub</h3>
+                    <p>Auto-locates using browser GPS to find the closest transport options</p>
+                    <button class="btn btn-primary cta-button" style="margin-top: 15px;">Find Nearby</button>
+                </div>
+                
+                <div class="feature-card glass-panel">
+                    <div class="feature-icon"><i class="fas fa-download"></i></div>
+                    <h3>Download Transit Map</h3>
+                    <p>Get detailed PDF maps of Jharkhand's transportation network</p>
+                    <button class="btn btn-primary cta-button" style="margin-top: 15px;">Download PDF</button>
+                </div>
+                
+                <div class="feature-card glass-panel">
+                    <div class="feature-icon"><i class="fas fa-car-side"></i></div>
+                    <h3>Book a Ride</h3>
+                    <p>Quick access to Ola, Uber, and local taxi services</p>
+                    <button class="btn btn-primary cta-button" style="margin-top: 15px;">Book Now</button>
+                </div>
+                
+                <div class="feature-card glass-panel">
+                    <div class="feature-icon"><i class="fas fa-route"></i></div>
+                    <h3>Plan Your Journey</h3>
+                    <p>Multi-modal route planning with time and cost estimates</p>
+                    <button class="btn btn-primary cta-button" style="margin-top: 15px;">Plan Route</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="transport-info">
+        <div class="container">
+            <div class="section-title">
+                <h2>Public Transport Information</h2>
+                <p>Complete details about Jharkhand's public transportation system</p>
+            </div>
+            
+            <div class="accordion">
+                <div class="accordion-item glass-panel">
+                    <div class="accordion-header">
+                        <h3><i class="fas fa-bus"></i> Intercity Buses</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <ul class="transport-list">
+                            <li><span>Ranchi to Jamshedpur</span><span>Every 30 mins | ₹250-400</span></li>
+                            <li><span>Ranchi to Deoghar</span><span>Every hour | ₹300-500</span></li>
+                            <li><span>Jamshedpur to Hazaribagh</span><span>Every 2 hours | ₹200-350</span></li>
+                            <li><span>Deoghar to Dumka</span><span>Every 45 mins | ₹150-250</span></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="accordion-item glass-panel">
+                    <div class="accordion-header">
+                        <h3><i class="fas fa-bus"></i> Local City Buses</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <ul class="transport-list">
+                            <li><span>Ranchi City Bus</span><span>6:00 AM - 10:00 PM | ₹10-25</span></li>
+                            <li><span>Jamshedpur City Services</span><span>5:30 AM - 10:30 PM | ₹8-20</span></li>
+                            <li><span>Dhanbad City Buses</span><span>6:00 AM - 11:00 PM | ₹10-30</span></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="accordion-item glass-panel">
+                    <div class="accordion-header">
+                        <h3><i class="fas fa-shuttle-van"></i> Tourist Shuttles</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <ul class="transport-list">
+                            <li><span>Ranchi to Netarhat</span><span>Daily 7:00 AM | ₹400</span></li>
+                            <li><span>Deoghar to Baidyanath Dham</span><span>Every 15 mins | ₹50</span></li>
+                            <li><span>Jamshedpur to Dalma Hills</span><span>Hourly | ₹100</span></li>
+                            <li><span>Hazaribagh to Canary Hill</span><span>Every 30 mins | ₹60</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="emergency-strip">
+        <div class="container">
+            <div class="emergency-content">
+                <div class="emergency-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Tourist Police: <strong>+91-94701-23456</strong></span>
+                </div>
+                <div class="emergency-item">
+                    <i class="fas fa-taxi"></i>
+                    <span>Emergency Cab: <strong>1800-123-1552</strong></span>
+                </div>
+                <div class="emergency-item">
+                    <i class="fas fa-comments"></i>
+                    <span>Support Chat: <strong>Available 24x7</strong></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="chat-bot">
+        <div class="chat-btn cta-button" id="chatBtn">
+            <i class="fas fa-comment-dots"></i>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Jharkhand Tourism</h3>
+                    <p>Discover the soul of Jharkhand through its rich culture, heritage, and natural beauty.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="artisans.html">Artisans & Crafts</a></li>
+                        <li><a href="destinations.html">Tourist Destinations</a></li>
+                        <li><a href="homestays.html">Homestays</a></li>
+                        <li><a href="transport.html">Transportation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Transport Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Bus Services</a></li>
+                        <li><a href="#">Train Schedules</a></li>
+                        <li><a href="#">Flight Information</a></li>
+                        <li><a href="#">Taxi & Rental Services</a></li>
+                        <li><a href="#">Tourist Shuttles</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-phone"></i> Tourism Helpline: 1800-123-1552</li>
+                        <li><i class="fas fa-envelope"></i> support@jharkhandtourism.in</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Ranchi, Jharkhand - 834001</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Jharkhand Smart Tourism. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="transportation.js"></script>
+</body>
+</html>
